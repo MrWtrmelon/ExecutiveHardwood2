@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  /*border: 1px red solid;*/
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.col-42 {width: 350%;}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.testDropContainer {
+  display: none;
+  text-align: left;
+  z-index: 1;
+  height: 100vh;
+}
+
+.testDrop:hover .testDropContainer{
+  display: block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+hr {
+  margin: 10px 0px 10px 0px;
+}
+
+.bottomBarOfPictures {
+  text-align: center;
+}
+
+.bottomBarOfPictures ul {
+  list-style-type: none;
+}
+
+.bottomBarOfPictures li {
+  display: inline-block;
+  margin: 1vw 1vh; /*vh=viewport height, vw=viewport width*/
+  padding: 1vh 1vw;
+  color: white;
+  background-color: rgba(0,0,0, 0.6);
+  border-radius: 100px;
+  font-size: 2vh;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.bottomBarOfPictures li a {
+  display: block;
+  width: 20vw;
+  font-size: 12px;
+  margin: auto;
+}
+
+.bottomBarOfPictures li:hover {
+  background-color: rgba(0,0,0, 1);
+}
+
+.mobileSideBars {
+  transform: translateY(35vh);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:  rgb(202, 202, 202);;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  height: 100vh;
+  width: 45vw;
+  box-shadow: 10px 0px 10px rgb(41, 41, 41);
+}
+
+.dropdown-content a {
+  padding: 10px 10px;
+}
+
+.dropbtn {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  color: white;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 42px;
+  transform: translateY(-13px);
+}
+
+.show {display:block;}
+
+@media screen and (max-width: 800px){
+  .bottomBarOfPictures li {
+    padding: 1vh 1vw;
+    white-space: nowrap;   
+    width: 100%;
+  }
+  .bottomBarOfPictures li a {
+    display: block;
+    width: 20vw;
+  }
+  .mobileSideBars {
+    transform: translateY(20vh);
+  }
+}
+</style>
+</head>
+<body>
+    <div class="row">
+
+      
+      <div class="col-12" style="padding: 0px; margin: 0px; background-image: url('images/wtrmelonLogo.jpeg'); height: 70px; background-repeat: no-repeat; background-size: contain; text-align: left; background-color: rgba(0,0,0); position: fixed; z-index: 2; background-position: right; box-shadow: 0px 5px 10px rgb(41, 41, 41);">
+        <!--Set the image to the background using CSS to get rid of that pesky gap-->
+        <br>
+        <ul>
+          <li class="testDrop" style="width: 15vw;">
+            <div class="dropdown">
+              <button id="myBtn" class="dropbtn">&#9776; </button>
+              <div id="myDropdown" class="dropdown-content">
+                <h1><a href="index.html">HOME</a></h1>
+                <hr>
+                <h1><a href="infoPage.html">INSTALL</a></h1>
+                <hr>
+                <h1><a href="infoPage2.html">REPAIR</a></h1>
+                <hr>
+                <h1><a href="infoPage3.html">CLEANING</a></h1>
+                <hr>
+                <h1><a href="infoPage4.html">SAND AND FINISH</a></h1>
+                <hr>
+                <h1><a href="infoPage5.html">CUSTOM WORK</a></h1>
+                <hr>
+                <h1><a href="infoPage6.html">TESTIMONIALS</a></h1>
+                <hr>
+                <h1><a href="contactPage.html">CONTACT</a></h1>
+                <hr>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="col-12" style="background-image: url(images/SampleBottomBar.png); height: 70vh; background-repeat: no-repeat; background-size: 100vw 70vh;">
+        
+        </div>
+        <div class="col-12" style="height: 30vh;">
+          <br>
+          <h1>Title</h1>
+          <h3>Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It’s not a story the Jedi would tell you. It’s a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life… He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful… the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.</h3>
+          <div class="col-12 bottomBarOfPictures mobileSideBars" style="transform: translateY(0px);">
+            <ul>
+              <li>
+                <a href="contactPage.html" style="color: white">CONTACT</a>
+              </li>
+            </ul>
+          </div>  
+        </div>
+      </div>
+
+      <div>
+        <div class="col-4">
+            <br>
+            <br>
+            <h1>Title</h1>
+            <h3>Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It’s not a story the Jedi would tell you. It’s a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life… He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful… the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.</h3>
+            <div class="col-12 bottomBarOfPictures mobileSideBars">
+              <ul>
+                <li>
+                  <a href="contactPage.html" style="color: white;">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        <div class="col-8" style="background-image: url(images/SampleLeftBar.png); height: 100vh; background-repeat: no-repeat; background-size: cover;">
+        
+        </div>
+      </div>
+
+      <div>
+        <div class="col-8" style="background-image: url(images/SampleRightBar.png); height: 100vh; background-repeat: no-repeat; background-size: 65vw 100vh;">
+        
+        </div>
+        <div class="col-4">
+          <br>
+          <br>
+          <h1>Title</h1>
+          <h3>Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It’s not a story the Jedi would tell you. It’s a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life… He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful… the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.</h3>
+          <div class="col-12 bottomBarOfPictures mobileSideBars">
+            <ul>
+              <li>
+                <a href="contactPage.html" style="color: white;">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="col-12" style="height: 30vh;">
+        <br>
+        <br>
+        <h1>Title</h1>
+        <h3>Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It’s not a story the Jedi would tell you. It’s a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life… He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful… the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.</h3>
+        <div class="col-12 bottomBarOfPictures mobileSideBars" style="transform: translateY(0px);">
+          <ul>
+            <li>
+              <a href="contactPage.html" style="color: white;">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12" style="background-image: url(images/SampleTopBar.png); height: 65vh; background-repeat: no-repeat; background-size: 100vw 100vh;">
+      
+      </div>
+    </div>
+
+
+<div>
+  <div class="col-12" style="height: 30vh;">
+    <br>
+    <br>
+    <h1>Title</h1>
+    <h3>Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It’s not a story the Jedi would tell you. It’s a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life… He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful… the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.</h3>
+    <div class="col-12 bottomBarOfPictures mobileSideBars" style="transform: translateY(0px);">
+      <ul>
+        <li>
+          <a href="contactPage.html" style="color: white;">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-12" style="background-image: url(images/SampleTopBar.png); height: 65vh; background-repeat: no-repeat; background-size: 100vw 100vh;">
+  
+  </div>
+</div>
+
+</body>
+
+<script>
+  // Get the button, and when the user clicks on it, execute myFunction
+  document.getElementById("myBtn").onclick = function() {myFunction()};
+
+/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  //https://www.w3schools.com/howto/howto_js_dropdown.asp
+  //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onclick_dropdown
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  /*border: 1px red solid;*/
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.col-42 {width: 350%;}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.testDropContainer {
+  display: none;
+  text-align: left;
+  z-index: 1;
+  height: 100vh;
+}
+
+.testDrop:hover .testDropContainer{
+  display: block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+hr {
+  margin: 10px 0px 10px 0px;
+}
+
+.bottomBarOfPictures {
+  transform: translateY(85vh);
+  text-align: center;
+}
+
+.bottomBarOfPictures ul {
+  list-style-type: none;
+  bottom: 0px;
+}
+
+.bottomBarOfPictures li {
+  display: inline-block;
+  margin: 1vw 1vh; /*vh=viewport height, vw=viewport width*/
+  padding: 1vh 1vw;
+  color: white;
+  background-color: rgba(0,0,0, 0.6);
+  border-radius: 100px;
+  font-size: 2vh;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.bottomBarOfPictures li a {
+  display: block;
+  width: 30vw;
+}
+
+.bottomBarOfPictures li:hover {
+  background-color: rgba(0,0,0, 1);
+}
+
+@media screen and (max-width: 800px){
+  .bottomBarOfPictures li {
+    padding: 1vh 1vw;
+    white-space: nowrap;   
+    width: 100%;
+  }
+  .bottomBarOfPictures li a {
+    display: block;
+    width: 83vw;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="row">
+
+  <div class="col-12" style="padding: 0px; margin: 0px; background-image: url('images/wtrmelonLogo.jpeg'); height: 70px; background-repeat: no-repeat; background-size: contain; text-align: left; background-color: rgba(0,0,0); position: fixed; z-index: 2; background-position: right; box-shadow: 0px 5px 10px rgb(41, 41, 41);">
+    <!--Set the image to the background using CSS to get rid of that pesky gap-->
+    <br>
+    <ul>
+      <li class="testDrop" style="width: 15vw;">
+        <a href="#"  class="testDropBtn" style="text-decoration: none; font-size: 45px; color: white; padding-left: 10px;  transform: translateY(-1.5vh); display: block;">&#9776; </a>
+        <div class="col-42 testDropContainer" style="background-color: rgb(202, 202, 202); transform: translateY(-10px); padding: 5px; box-shadow: 10px 0px 10px rgb(41, 41, 41);"> 
+          <h1><a href="index.html">HOME</a></h1>
+          <hr>
+          <h1><a href="infoPage.html">INSTALL</a></h1>
+          <hr>
+          <h1><a href="infoPage2.html">REPAIR</a></h1>
+          <hr>
+          <h1><a href="infoPage3.html">CLEANING</a></h1>
+          <hr>
+          <h1><a href="infoPage4.html">SAND AND FINISH</a></h1>
+          <hr>
+          <h1><a href="infoPage5.html">CUSTOM WORK</a></h1>
+          <hr>
+          <h1><a href="infoPage.html">TESTIMONIALS</a></h1>
+          <hr>
+          <h1><a href="contactPage.html">CONTACT</a></h1>
+          <hr>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-12" style="background-image: url(images/Floor_Install.JPG); height: 110vh; background-repeat: no-repeat; background-size: 100vw 120vh;">
+    <h1 style="text-align: center; transform: translateY(25vh); color: rgb(255, 255, 255); text-shadow: 2px 2px 5px black;">Floor Install</h1>
+    <h3 style="text-align: center; transform: translateY(28vh); color: white; text-shadow: 2px 2px 5px black;">Call for a free quote</h3>
+    <div class="col-12 bottomBarOfPictures" style="transform: translateY(65vh)">
+      <ul>
+        <li>
+          <a href="contactPage.html" style="color: white;">CONTACT</a>
+        </li>
+        <li>
+          <a href="infoPage.html" style="color: white;">LEARN MORE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12" style="background-image: url(images/Repairs.JPEG); height: 110vh; background-repeat: no-repeat; background-size: 110vw 110vh;">
+    <h1 style="text-align: center; transform: translateY(25vh); color: white; text-shadow: 2px 2px 5px black;">Floor Repairs</h1>
+    <h3 style="text-align: center; transform: translateY(28vh); color: white; text-shadow: 2px 2px 5px black;">Call for a free quote</h3>
+    <div class="col-12 bottomBarOfPictures" style="transform: translateY(70vh)">
+      <ul>
+        <li>
+          <a href="contactPage.html" style="color: white;">CONTACT</a>
+        </li>
+        <li>
+          <a href="infoPage2.html" style="color: white;">LEARN MORE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12" style="background-image: url(images/Floor_Cleaning.JPG); height: 110vh; background-repeat: no-repeat; background-size: 100vw 120vh;">
+    <h1 style="text-align: center; transform: translateY(25vh); color: white; text-shadow: 2px 2px 5px black;">Floor Cleaning</h1>
+    <h3 style="text-align: center; transform: translateY(28vh); color: white; text-shadow: 2px 2px 5px black;">Call for a free quote</h3>
+    <div class="col-12 bottomBarOfPictures" style="transform: translateY(70vh)">
+      <ul>
+        <li>
+          <a href="contactPage.html" style="color: white;">CONTACT</a>
+        </li>
+        <li>
+          <a href="infoPage3.html" style="color: white;">LEARN MORE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12" style="background-image: url(images/Sand_Finish.JPEG); height: 110vh; background-repeat: no-repeat; background-size: 100vw 110vh;">
+    <h1 style="text-align: center; transform: translateY(22vh); color: white; text-shadow: 2px 2px 5px black;">Sand and Finish for Floors</h1>
+    <h3 style="text-align: center; transform: translateY(25vh); color: white; text-shadow: 2px 2px 5px black;">Call for a free quote</h3>
+    <div class="col-12 bottomBarOfPictures" style="transform: translateY(60vh)">
+      <ul>
+        <li>
+          <a href="contactPage.html" style="color: white;">CONTACT</a>
+        </li>
+        <li>
+          <a href="infoPage4.html" style="color: white;">LEARN MORE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12" style="background-image: url(images/Custom.JPEG); height: 110vh; background-repeat: no-repeat; background-size: 100vw 110vh;">
+    <h1 style="text-align: center; transform: translateY(25vh); color: white; text-shadow: 2px 2px 5px black;">Custom Work</h1>
+    <h3 style="text-align: center; transform: translateY(28vh); color: white; text-shadow: 2px 2px 5px black;">Call for a free quote</h3>
+    <div class="col-12 bottomBarOfPictures" style="transform: translateY(70vh)">
+      <ul>
+        <li>
+          <a href="contactPage.html" style="color: white;">CONTACT</a>
+        </li>
+        <li>
+          <a href="infoPage5.html" style="color: white;">LEARN MORE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12" style="background-image: url(images/Custom.JPEG); height: 110vh; background-repeat: no-repeat; background-size: 100vw 110vh;">
+    <h1 style="text-align: center; transform: translateY(25vh); color: white; text-shadow: 2px 2px 5px black;">Testamonials</h1>
+    <h3 style="text-align: center; transform: translateY(28vh); color: white; text-shadow: 2px 2px 5px black;">Listen to what our Clients have to say</h3>
+    <div class="col-12 bottomBarOfPictures" style="transform: translateY(70vh)">
+      <ul>
+        <li>
+          <a href="contactPage.html" style="color: white;">CONTACT</a>
+        </li>
+        <li>
+          <a href="infoPage6.html" style="color: white;">LEARN MORE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+</body>
+
+<script>
+    //https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_styles
+</script>
+
+</html>
